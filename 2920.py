@@ -16,3 +16,25 @@
 # 예제 출력 1 
 # ascending
 
+nums = input().split(' ')
+
+for i in range(8):
+    nums[i] = int(nums[i])
+
+asc = True
+desc = True
+prev = nums[1]
+
+for i in range(1, 8):
+    if nums[i] > prev:
+        desc = False
+    elif nums[i] < prev:
+        asc = False
+    prev = nums[i]
+
+if asc:
+    print("ascending")
+elif desc:
+    print("descending")
+else:
+    print("mixed")
