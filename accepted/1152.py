@@ -8,6 +8,9 @@
 # 첫째 줄에 단어의 개수를 출력한다.
 
 sentence = input().strip()
-print(sentence.count(' ')+1)
+if sentence == '':
+    print(0)
+else:
+    print(sentence.count(' ')+1)
 
 # WRONG

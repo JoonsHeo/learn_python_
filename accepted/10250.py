@@ -31,6 +31,8 @@ for i in range(T):
     w = int(testCur[1])
     n = int(testCur[2])
 
-    print(f"{n%h}0{n//h+1}")
-
-    # WRONG
+    rowNo = n%h if n%h != 0 else h
+    colNo = n//h+1 if n%h != 0 else n//h
+    if colNo < 10:
+        colNo = '0' + str(colNo)
+    print(f"{rowNo}{colNo}")
